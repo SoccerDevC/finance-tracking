@@ -1,0 +1,1 @@
+# The utils.py file includes utility functions or helper methods that can be reused throughout the application.

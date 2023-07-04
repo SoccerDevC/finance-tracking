@@ -1,0 +1,1 @@
+# The config.py file stores configuration variables or settings for your project.

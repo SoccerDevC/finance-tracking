@@ -1,0 +1,44 @@
+<!-- It typically contains the common elements and structure shared by all the other HTML templates in your application -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Finance Tracker</title>
+        <!-- Include CSS stylesheets -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <!-- Include JavaScript files if necessary -->
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </head>
+    
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('registration') }}">Registration</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('expense') }}">Expense Tracker</a></li>
+            <li><a href="{{ url_for('income') }}">Income Tracker</a></li>
+            <li><a href="{{ url_for('budget') }}">Budget Management</a></li>
+            <li><a href="{{ url_for('reports') }}">Reports and Analytics</a></li>
+            <li><a href="{{ url_for('settings') }}">Settings</a></li>
+            <li><a href="{{ url_for('help') }}">Help/FAQ</a></li>
+        </ul>
+    </nav>
+    
+    
+    <!-- Content area -->
+    <div class="content">
+        <!-- Content specific to each page will be inserted here -->
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Your footer content -->
+        <p>&copy; 2023 Finance Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
